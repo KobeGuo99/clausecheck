@@ -6,7 +6,9 @@ export async function extractTextFromImage(file: File): Promise<string> {
     const worker: any = await createWorker();
     
     // Initialize the worker with English language
+    // @ts-ignore
     await worker.loadLanguage('eng');
+    // @ts-ignore
     await worker.initialize('eng');
     
     // Convert File to base64
