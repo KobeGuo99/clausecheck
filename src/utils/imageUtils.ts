@@ -3,7 +3,7 @@ import { createWorker } from 'tesseract.js';
 export async function extractTextFromImage(file: File): Promise<string> {
   try {
     // Create a worker
-    const worker = await createWorker();
+    const worker: any = await createWorker();
     
     // Initialize the worker with English language
     await worker.loadLanguage('eng');
